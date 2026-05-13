@@ -56,10 +56,56 @@
     .recap-table .gray { color: #4a5a6c; }
     .recap-table .red  { color: var(--red-deep); }
 
+    /* Speed-of-news table — narrower, more concrete */
+    .speed-table {
+      margin: 32px 0;
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .speed-table th,
+    .speed-table td {
+      text-align: left;
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .speed-table th {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      border-bottom: 2px solid var(--accent);
+    }
+    .speed-table .year {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ink);
+      white-space: nowrap;
+      width: 80px;
+    }
+    .speed-table .speed {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      white-space: nowrap;
+      text-align: right;
+      width: 130px;
+    }
+
     @media (max-width: 640px) {
       .recap-table { font-size: 14px; }
       .recap-table th, .recap-table td { padding: 12px 6px; }
       .recap-table .chap { font-size: 15px; }
+      .speed-table { font-size: 14px; }
+      .speed-table th, .speed-table td { padding: 10px 6px; }
+      .speed-table .year { font-size: 15px; width: 60px; }
+      .speed-table .speed { font-size: 12px; width: 90px; }
     }
   </style>
 </head>
@@ -233,6 +279,48 @@
         </tr>
       </tbody>
     </table>
+
+    <!-- T2 — Speed of news table -->
+    <h2 style="margin-top:56px;">How Fast the News Travelled</h2>
+
+    <p>Same kind of news. Five hundred years apart. Look how the clock has changed.</p>
+
+    <table class="speed-table">
+      <thead>
+        <tr>
+          <th class="year">Year</th>
+          <th>Story</th>
+          <th class="speed">Speed of spread</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="year">1517</td>
+          <td>Luther's 95 Theses leave Wittenberg and reach every major European city.</td>
+          <td class="speed">~8 weeks</td>
+        </tr>
+        <tr>
+          <td class="year">1865</td>
+          <td>News of Lincoln's assassination crosses the Atlantic to London — the 1858 cable is dead and 1866 hasn't happened yet.</td>
+          <td class="speed">~12 days (by ship)</td>
+        </tr>
+        <tr>
+          <td class="year">1912</td>
+          <td>The Titanic's SOS reaches the rescue ship Carpathia 58 miles away.</td>
+          <td class="speed">~seconds (radio)</td>
+        </tr>
+        <tr>
+          <td class="year">1969</td>
+          <td>Neil Armstrong's first step is watched live by a sixth of humanity, on six continents.</td>
+          <td class="speed">live (TV)</td>
+        </tr>
+        <tr>
+          <td class="year">2011</td>
+          <td>A protester in Tahrir Square posts a video; it is on every continent before the police arrive.</td>
+          <td class="speed">~seconds (smartphone)</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <!-- THE NEXT ONE -->
@@ -249,6 +337,86 @@
 
     <p>You know this story. You have just read it six times.</p>
   </section>
+
+  <!-- B1 — Time to 50 million users -->
+  <figure class="pattern-tracker">
+    <p class="label">The Clock, Speeding Up</p>
+    <p class="title">How long each technology took to reach 50 million users</p>
+
+    <svg viewBox="0 0 800 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="b1title b1desc">
+      <title id="b1title">Time taken to reach 50 million users</title>
+      <desc id="b1desc">A horizontal bar chart. Telephone takes 75 years to reach 50 million users. Radio takes 38 years. Television takes 13 years. The Internet takes 4 years. Facebook takes 3.5 years. YouTube takes 4 years. Instagram takes 2.5 years. TikTok takes 9 months. ChatGPT takes 2 months. The pattern is a clock speeding up.</desc>
+
+      <!-- X axis ticks at 0, 25, 50, 75 years -->
+      <g stroke="#d9c9a8" stroke-width="0.6" stroke-dasharray="3,3">
+        <line x1="180" y1="50"  x2="180" y2="380"/>
+        <line x1="347" y1="50"  x2="347" y2="380"/>
+        <line x1="513" y1="50"  x2="513" y2="380"/>
+        <line x1="680" y1="50"  x2="680" y2="380"/>
+      </g>
+      <g font-family="Inter, sans-serif" font-size="11" fill="#4a3f33" text-anchor="middle">
+        <text x="180" y="400">0 yrs</text>
+        <text x="347" y="400">25</text>
+        <text x="513" y="400">50</text>
+        <text x="680" y="400">75</text>
+      </g>
+
+      <!-- Row 1: Telephone — 75 yrs (1876 → 1951) -->
+      <text x="170" y="78" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b" text-anchor="end">Telephone</text>
+      <rect x="180" y="68" width="500" height="18" fill="#2a221b" opacity="0.78"/>
+      <text x="688" y="82" font-family="Inter, sans-serif" font-size="12" fill="#4a3f33">75 years</text>
+
+      <!-- Row 2: Radio — 38 yrs -->
+      <text x="170" y="110" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b" text-anchor="end">Radio</text>
+      <rect x="180" y="100" width="253" height="18" fill="#2a221b" opacity="0.78"/>
+      <text x="441" y="114" font-family="Inter, sans-serif" font-size="12" fill="#4a3f33">38</text>
+
+      <!-- Row 3: Television — 13 yrs -->
+      <text x="170" y="142" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b" text-anchor="end">Television</text>
+      <rect x="180" y="132" width="87" height="18" fill="#2a221b" opacity="0.78"/>
+      <text x="275" y="146" font-family="Inter, sans-serif" font-size="12" fill="#4a3f33">13</text>
+
+      <!-- Row 4: Internet (Web) — 4 yrs -->
+      <text x="170" y="174" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b" text-anchor="end">Internet</text>
+      <rect x="180" y="164" width="27" height="18" fill="#2a221b" opacity="0.78"/>
+      <text x="215" y="178" font-family="Inter, sans-serif" font-size="12" fill="#4a3f33">4</text>
+
+      <!-- Row 5: Facebook — 3.5 yrs -->
+      <text x="170" y="206" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b" text-anchor="end">Facebook</text>
+      <rect x="180" y="196" width="23" height="18" fill="#2a221b" opacity="0.78"/>
+      <text x="211" y="210" font-family="Inter, sans-serif" font-size="12" fill="#4a3f33">3.5</text>
+
+      <!-- Row 6: YouTube — 4 yrs -->
+      <text x="170" y="238" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b" text-anchor="end">YouTube</text>
+      <rect x="180" y="228" width="27" height="18" fill="#2a221b" opacity="0.78"/>
+      <text x="215" y="242" font-family="Inter, sans-serif" font-size="12" fill="#4a3f33">4</text>
+
+      <!-- Row 7: Instagram — 2.5 yrs -->
+      <text x="170" y="270" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b" text-anchor="end">Instagram</text>
+      <rect x="180" y="260" width="17" height="18" fill="#2a221b" opacity="0.78"/>
+      <text x="205" y="274" font-family="Inter, sans-serif" font-size="12" fill="#4a3f33">2.5</text>
+
+      <!-- Row 8: TikTok — 9 months — burgundy accent (visual emphasis) -->
+      <text x="170" y="302" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b" text-anchor="end">TikTok</text>
+      <rect x="180" y="292" width="5" height="18" fill="#8a2a2a"/>
+      <text x="193" y="306" font-family="Inter, sans-serif" font-size="12" fill="#8a2a2a" font-weight="600">9 months</text>
+
+      <!-- Row 9: ChatGPT — 2 months — burgundy accent -->
+      <text x="170" y="334" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b" text-anchor="end">ChatGPT</text>
+      <rect x="180" y="324" width="2" height="18" fill="#8a2a2a"/>
+      <text x="190" y="338" font-family="Inter, sans-serif" font-size="12" fill="#8a2a2a" font-weight="600">2 months</text>
+
+      <!-- Caption below chart -->
+      <text x="400" y="438" font-family="Lora, serif" font-style="italic" font-size="13" fill="#4a3f33" text-anchor="middle">
+        Each bar is the same scale. ChatGPT's bar is two months wide on a 75-year axis.
+      </text>
+      <text x="400" y="456" font-family="Lora, serif" font-style="italic" font-size="13" fill="#4a3f33" text-anchor="middle">
+        That is the speed at which information technologies arrive in your lifetime.
+      </text>
+    </svg>
+
+    <figcaption>Data approximated from UN International Telecommunication Union, Pew Research Center, and Visual Capitalist (2024).</figcaption>
+  </figure>
 
   <!-- YOUR SIXTY SECONDS — summative -->
   <section class="moment">
