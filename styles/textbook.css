@@ -189,22 +189,35 @@ p {
 
 /* REAL IMAGES (replaces .image-placeholder once an image is sourced) */
 .image {
-  margin: 32px 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 32px auto;
   padding: 0;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .image img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
+  margin: 0 auto;
   border-radius: 3px;
   border: 1px solid var(--rule);
   box-shadow: var(--shadow);
+  box-sizing: border-box;
+}
+
+/* Square or near-square illustrations look better narrower than full column */
+.image.narrow img {
+  max-width: 480px;
 }
 
 .image figcaption {
-  margin: 14px 4px 0;
+  max-width: 100%;
+  margin: 14px auto 0;
   font-family: 'Lora', serif;
   font-style: italic;
   font-size: 14px;
