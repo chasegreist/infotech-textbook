@@ -39,6 +39,30 @@ article {
   padding: 60px 32px 120px;
 }
 
+/* TOP NAV — small "back to contents" link above the chapter header */
+.top-nav {
+  margin: 0 0 32px;
+  padding-bottom: 4px;
+}
+
+.top-nav a {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.top-nav a:hover,
+.top-nav a:focus {
+  color: var(--accent);
+  outline: none;
+}
+
 /* HEADER */
 header.chapter-header {
   text-align: center;
