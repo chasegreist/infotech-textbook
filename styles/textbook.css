@@ -504,3 +504,62 @@ p {
   .chapter-nav { flex-direction: column; gap: 24px; align-items: stretch; }
   .chapter-nav .next { text-align: left; }
 }
+
+/* ============================================================
+   Vocab click-to-define
+   ============================================================ */
+
+.vocab {
+  cursor: pointer;
+  border-bottom: 1.5px dotted var(--accent);
+  color: inherit;
+  position: relative;
+  transition: background .15s ease;
+  padding: 0 1px;
+}
+.vocab:hover,
+.vocab:focus {
+  background: rgba(138, 42, 42, .10);
+  outline: none;
+}
+.vocab.is-open {
+  background: rgba(138, 42, 42, .15);
+}
+
+.vocab-pop {
+  position: absolute;
+  z-index: 1000;
+  max-width: min(320px, calc(100vw - 16px));
+  background: var(--bg);
+  border: 1px solid rgba(42, 34, 27, .35);
+  padding: .85rem 1rem;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+  box-shadow: 3px 4px 0 rgba(42, 34, 27, .12);
+  animation: vocab-fade-in .15s ease-out;
+}
+.vocab-pop::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(42, 34, 27, .12);
+  pointer-events: none;
+}
+@keyframes vocab-fade-in {
+  from { opacity: 0; transform: translateY(-2px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.vocab-pop-term {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: .4rem;
+}
+.vocab-pop-def {
+  color: var(--ink);
+}
