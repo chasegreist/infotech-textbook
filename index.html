@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Information Changed the World</title>
+  <meta name="description" content="A short student textbook tracing how each new information technology — from the printing press to the smartphone — follows the same arc: miracle, ordinary, weaponized.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe1;
+      --bg-deep: #efe5d0;
+      --ink: #2a221b;
+      --ink-soft: #4a3f33;
+      --rule: #d9c9a8;
+      --accent: #8a2a2a;
+      --accent-soft: #b85c4f;
+      --gold: #c89b3c;
+      --blue-gray: #6c7a89;
+      --red-deep: #7a1d1d;
+      --shadow: 0 2px 14px rgba(60, 40, 20, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', Georgia, 'Times New Roman', serif;
+      font-size: 19px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 80px 32px 120px;
+    }
+
+    /* COVER */
+    .cover {
+      text-align: center;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 64px;
+    }
+
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 28px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: 62px;
+      line-height: 1.05;
+      margin: 0 0 22px;
+      color: var(--ink);
+      letter-spacing: -0.015em;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--ink-soft);
+      margin: 0 auto;
+      max-width: 32rem;
+      line-height: 1.5;
+    }
+
+    /* THROUGH-LINE CALLOUT */
+    .throughline {
+      background: var(--bg-deep);
+      border-left: 4px solid var(--accent);
+      padding: 32px 36px;
+      margin: 48px -36px;
+      border-radius: 2px;
+      box-shadow: var(--shadow);
+    }
+
+    .throughline .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin: 0 0 14px;
+    }
+
+    .throughline p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 1.45;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    /* THE PATTERN — three colored stages */
+    .pattern-key {
+      display: flex;
+      gap: 12px;
+      margin: 48px 0;
+      flex-wrap: wrap;
+    }
+
+    .stage {
+      flex: 1 1 200px;
+      padding: 18px 20px;
+      border-radius: 4px;
+      color: #fff;
+      text-align: left;
+    }
+
+    .stage.miracle    { background: var(--gold); }
+    .stage.ordinary   { background: var(--blue-gray); }
+    .stage.weaponized { background: var(--red-deep); }
+
+    .stage .name {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 0 0 6px;
+      opacity: 0.9;
+    }
+
+    .stage .desc {
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* CHAPTER LIST */
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 64px 0 24px;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .toc {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .toc li {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .toc li:last-child {
+      border-bottom: none;
+    }
+
+    .toc a,
+    .toc .ch-unavailable {
+      display: grid;
+      grid-template-columns: 92px 1fr auto;
+      gap: 24px;
+      align-items: baseline;
+      padding: 22px 0;
+      color: var(--ink);
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+
+    .toc a:hover {
+      background: var(--bg-deep);
+      margin: 0 -16px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .toc .num {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .toc .ch-unavailable .num {
+      color: var(--ink-soft);
+      opacity: 0.6;
+    }
+
+    .toc .title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    .toc .ch-unavailable .title {
+      color: var(--ink-soft);
+    }
+
+    .toc .era {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
+
+    .toc .coming {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      font-weight: 700;
+      margin-top: 6px;
+    }
+
+    /* INTRO */
+    .intro p {
+      margin: 0 0 22px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--rule);
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: var(--ink-soft);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      main { padding: 48px 22px 80px; }
+      h1 { font-size: 44px; }
+      .subtitle { font-size: 18px; }
+      .throughline { margin: 40px -22px; padding: 26px 22px; }
+      .throughline p { font-size: 20px; }
+      .toc a, .toc .ch-unavailable {
+        grid-template-columns: 50px 1fr;
+        row-gap: 4px;
+      }
+      .toc .era { grid-column: 2 / 3; }
+      body { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <header class="cover">
+      <p class="eyebrow">An Information Technology Reader · Grade 7 I&amp;S</p>
+      <h1>How Information <em>Changed</em><br>the World</h1>
+      <p class="subtitle">Six stories about how every new information technology — from the printing press to the smartphone — follows the same arc.</p>
+    </header>
+
+    <section class="intro">
+      <p>This book is built around one idea. Every information technology — every new way for humans to copy and move ideas — has followed the same three steps. It arrives as a miracle. It becomes ordinary. Eventually, someone learns how to weaponize it.</p>
+      <p>The pattern has been running for five hundred years. The chapters below trace it through six technologies that each changed who held power, what people believed, and how fast a new idea could spread.</p>
+    </section>
+
+    <div class="throughline">
+      <p class="label">The Through-Line</p>
+      <p>“Every new information technology starts as a miracle, becomes ordinary, and eventually gets weaponized. The pattern has been running for five hundred years.”</p>
+    </div>
+
+    <div class="pattern-key">
+      <div class="stage miracle">
+        <p class="name">Miracle</p>
+        <p class="desc">A new technology arrives. Almost nobody understands it. The first people who get it feel like wizards.</p>
+      </div>
+      <div class="stage ordinary">
+        <p class="name">Ordinary</p>
+        <p class="desc">It spreads. Costs drop. It stops being magical and becomes part of how things just work.</p>
+      </div>
+      <div class="stage weaponized">
+        <p class="name">Weaponized</p>
+        <p class="desc">Someone figures out how to use it to manipulate, divide, or control people. Often that someone is the state.</p>
+      </div>
+    </div>
+
+    <h2>Chapters</h2>
+    <ol class="toc">
+
+      <li>
+        <span class="ch-unavailable">
+          <span class="num">Prologue</span>
+          <span>
+            <span class="title">The Pattern</span>
+            <span class="coming">Coming soon</span>
+          </span>
+          <span class="era">Setup</span>
+        </span>
+      </li>
+
+      <li>
+        <a href="01-printing-press.html">
+          <span class="num">Ch&nbsp;1</span>
+          <span class="title">A Monk, a Machine, and a Door</span>
+          <span class="era">Printing Press · 1450s–1500s</span>
+        </a>
+      </li>
+
+      <li>
+        <span class="ch-unavailable">
+          <span class="num">Ch&nbsp;2</span>
+          <span>
+            <span class="title">The Two-Thousand-Year Speed Limit</span>
+            <span class="coming">Coming soon</span>
+          </span>
+          <span class="era">Telegraph · 1840s–1860s</span>
+        </span>
+      </li>
+
+      <li>
+        <span class="ch-unavailable">
+          <span class="num">Ch&nbsp;3</span>
+          <span>
+            <span class="title">The Ship That Wouldn’t Listen</span>
+            <span class="coming">Coming soon</span>
+          </span>
+          <span class="era">Radio · 1900s–1940s</span>
+        </span>
+      </li>
+
+      <li>
+        <span class="ch-unavailable">
+          <span class="num">Ch&nbsp;4</span>
+          <span>
+            <span class="title">The Camera Picks a President</span>
+            <span class="coming">Coming soon</span>
+          </span>
+          <span class="era">Television · 1950s–1990s</span>
+        </span>
+      </li>
+
+      <li>
+        <span class="ch-unavailable">
+          <span class="num">Ch&nbsp;5</span>
+          <span>
+            <span class="title">The Typo Heard Round the World</span>
+            <span class="coming">Coming soon</span>
+          </span>
+          <span class="era">Internet · 1969–2000s</span>
+        </span>
+      </li>
+
+      <li>
+        <span class="ch-unavailable">
+          <span class="num">Ch&nbsp;6</span>
+          <span>
+            <span class="title">Revolutions in Your Pocket</span>
+            <span class="coming">Coming soon</span>
+          </span>
+          <span class="era">Smartphones · 2007–now</span>
+        </span>
+      </li>
+
+      <li>
+        <span class="ch-unavailable">
+          <span class="num">Epilogue</span>
+          <span>
+            <span class="title">Spotting the Pattern</span>
+            <span class="coming">Coming soon</span>
+          </span>
+          <span class="era">Payoff</span>
+        </span>
+      </li>
+
+    </ol>
+
+    <footer>
+      Written by Kru Chase for Grade 7 Individuals &amp; Societies at UWC Thailand.<br>
+      A <a href="https://brightplanetlabs.com">Bright Planet Labs</a> publication.
+    </footer>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1 — A Monk, a Machine, and a Door | How Information Changed the World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe1;
+      --bg-deep: #efe5d0;
+      --ink: #2a221b;
+      --ink-soft: #4a3f33;
+      --rule: #d9c9a8;
+      --accent: #8a2a2a;
+      --accent-soft: #b85c4f;
+      --gold: #c89b3c;
+      --blue-gray: #6c7a89;
+      --red-deep: #7a1d1d;
+      --shadow: 0 2px 14px rgba(60, 40, 20, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', Georgia, 'Times New Roman', serif;
+      font-size: 19px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    article {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 32px 120px;
+    }
+
+    /* HEADER */
+    header.chapter-header {
+      text-align: center;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 60px;
+    }
+
+    .series {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 24px;
+      font-weight: 600;
+    }
+
+    .chapter-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin: 0 0 8px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: 52px;
+      line-height: 1.1;
+      margin: 0 0 16px;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    /* SECTION HEADINGS */
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 56px 0 20px;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    p {
+      margin: 0 0 22px;
+    }
+
+    /* THE MOMENT — dramatic opening */
+    .moment {
+      background: var(--bg-deep);
+      border-left: 4px solid var(--accent);
+      padding: 32px 36px;
+      margin: 40px -36px;
+      border-radius: 2px;
+      box-shadow: var(--shadow);
+    }
+
+    .moment h2 {
+      margin-top: 0;
+    }
+
+    .moment p:first-of-type::first-letter {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 64px;
+      font-weight: 600;
+      float: left;
+      line-height: 0.9;
+      margin: 6px 10px 0 0;
+      color: var(--accent);
+    }
+
+    .moment p {
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .moment .nailed {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 22px;
+      color: var(--accent);
+      margin: 28px 0;
+      letter-spacing: 0.02em;
+    }
+
+    /* IMAGE PLACEHOLDER */
+    .image-placeholder {
+      border: 1.5px dashed var(--accent-soft);
+      background: rgba(255, 255, 255, 0.4);
+      padding: 40px 24px;
+      text-align: center;
+      margin: 32px 0;
+      border-radius: 4px;
+    }
+
+    .image-placeholder .icon {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .image-placeholder .desc {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      color: var(--ink-soft);
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .image-placeholder .caption {
+      display: block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--ink-soft);
+      font-style: normal;
+    }
+
+    /* VOICES FROM THE TIME */
+    .voices {
+      background: #fff8ea;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 32px 36px;
+      margin: 40px 0;
+      position: relative;
+    }
+
+    .voices::before {
+      content: "❝";
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 80px;
+      color: var(--accent-soft);
+      position: absolute;
+      top: -8px;
+      left: 18px;
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .voices .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin: 0 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .voices blockquote {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1.5;
+      color: var(--ink);
+      position: relative;
+      z-index: 1;
+    }
+
+    .voices cite {
+      display: block;
+      margin-top: 16px;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-size: 13px;
+      color: var(--ink-soft);
+      letter-spacing: 0.05em;
+    }
+
+    /* PATTERN TRACKER */
+    .pattern-tracker {
+      margin: 48px 0;
+      padding: 32px 24px;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      box-shadow: var(--shadow);
+    }
+
+    .pattern-tracker .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-align: center;
+      margin: 0 0 8px;
+      font-weight: 600;
+    }
+
+    .pattern-tracker .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      text-align: center;
+      margin: 0 0 24px;
+      color: var(--ink);
+    }
+
+    .pattern-tracker svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 220px;
+    }
+
+    .pattern-tracker figcaption {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--ink-soft);
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    /* KEY WORDS SIDEBAR */
+    .key-words {
+      background: var(--bg-deep);
+      border-radius: 6px;
+      padding: 28px 32px;
+      margin: 48px 0;
+    }
+
+    .key-words h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+
+    .key-words dl {
+      margin: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .key-words dt {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 15px;
+      display: inline;
+    }
+
+    .key-words dd {
+      display: inline;
+      margin: 0;
+      font-size: 16px;
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    .key-words dt::after {
+      content: " — ";
+      color: var(--ink-soft);
+      font-weight: 400;
+    }
+
+    .key-words .entry {
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(160, 130, 80, 0.18);
+    }
+
+    .key-words .entry:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    /* REFLECT */
+    .reflect {
+      background: linear-gradient(to bottom, var(--bg-deep), var(--bg));
+      border-radius: 6px;
+      padding: 32px 36px;
+      margin-top: 56px;
+      border-top: 3px solid var(--accent);
+    }
+
+    .reflect h2 {
+      margin-top: 0;
+    }
+
+    .reflect ol {
+      padding-left: 0;
+      counter-reset: q;
+      list-style: none;
+      margin: 0;
+    }
+
+    .reflect ol li {
+      counter-increment: q;
+      padding-left: 56px;
+      position: relative;
+      margin-bottom: 24px;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .reflect ol li::before {
+      content: counter(q);
+      position: absolute;
+      left: 0;
+      top: -4px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .reflect ol li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* FOOTER NAV */
+    .chapter-nav {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      color: var(--ink-soft);
+    }
+
+    .chapter-nav .next {
+      text-align: right;
+    }
+
+    .chapter-nav .label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      margin-bottom: 4px;
+    }
+
+    .chapter-nav .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--ink);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      article { padding: 40px 20px 80px; }
+      body { font-size: 17px; }
+      h1 { font-size: 36px; }
+      .moment { margin: 32px -20px; padding: 24px 24px; }
+      .voices { padding: 24px 24px; }
+      .reflect { padding: 24px 24px; }
+      .key-words { padding: 22px 24px; }
+      .reflect ol li { padding-left: 44px; font-size: 16px; }
+      .reflect ol li::before { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+<article>
+
+  <header class="chapter-header">
+    <p class="series">How Information Changed the World</p>
+    <p class="chapter-num">Chapter One</p>
+    <h1>A Monk, a Machine, and a Door</h1>
+    <p class="subtitle">The Printing Press · 1450s–1500s</p>
+  </header>
+
+  <!-- THE MOMENT -->
+  <section class="moment">
+    <h2>The Moment</h2>
+    <p>It is October 31, 1517. A cold morning in Wittenberg, a small university town in what is now Germany. A young priest named Martin Luther — thirty-three years old, the son of a copper miner — walks to the wooden door of the Castle Church. In his hand is a piece of paper. On the paper are 95 sentences, each one an argument against a practice called <strong>indulgences</strong>.</p>
+
+    <p>Indulgences were payments. Ordinary people gave money to the Catholic Church, and in return the Church promised to reduce their punishment for sin — or the punishment of a loved one who had already died. By 1517, traveling preachers were moving from town to town selling indulgences like tickets. Luther believed the whole practice was corrupt. A church, he thought, should not be selling forgiveness.</p>
+
+    <p class="nailed">He nails the paper to the door.</p>
+
+    <p>This is not, on its own, a dramatic act. The church door functions as a kind of public bulletin board in Wittenberg, and university scholars post arguments there all the time. Luther expects, at most, a quiet debate with a few colleagues.</p>
+
+    <p>What he does not expect is what happens next.</p>
+
+    <p>Within two weeks, copies of his 95 Theses are circulating in cities across Germany. Within two months, they have spread to France, England, and Italy. By the end of 1517, every major city in Europe has either read them or is talking about them. Luther himself is bewildered. He later wrote that the spread of his ideas felt like the work of "angels as postmen."</p>
+
+    <p>He had no way of knowing that something else — something brand new, something most people had barely heard of — was carrying his words at a speed no idea had ever traveled before.</p>
+
+    <p>That something was a machine. A printing press.</p>
+  </section>
+
+  <!-- IMAGE 1 -->
+  <div class="image-placeholder">
+    <p class="icon">Image 1</p>
+    <p class="desc">A woodcut of Martin Luther nailing the 95 Theses to the Castle Church door, Wittenberg, October 31, 1517.</p>
+    <p class="caption">[Historical woodcut — public domain. To be sourced.]</p>
+  </div>
+
+  <!-- BEFORE -->
+  <section>
+    <h2>Before</h2>
+    <p>To understand why Luther's small act mattered, you have to understand the world it landed in.</p>
+
+    <p>Before the printing press, books were made one at a time, by hand. A monk in a quiet room — a <em>scriptorium</em> — would sit at a desk for an entire year to copy a single Bible. One book. One year. One person.</p>
+
+    <p>This meant books were almost unimaginably expensive. A complete Bible could cost as much as a small farm. The vast majority of Europeans had never held a book in their lives. The vast majority could not read, partly because there was almost nothing to read.</p>
+
+    <p>It also meant that knowledge moved slowly. An idea you had in Rome might take ten years to reach Paris, if it ever did at all. Most knowledge — and most power — lived inside one institution: the Catholic Church. The Church owned most of the books, controlled who copied them, and decided what they said. If you wanted to know what the Bible said, you had to ask a priest. And the priest read it to you in Latin, a language almost no ordinary person spoke.</p>
+
+    <p>For about a thousand years, this was simply how the world worked.</p>
+  </section>
+
+  <!-- IMAGE 2 -->
+  <div class="image-placeholder">
+    <p class="icon">Image 2</p>
+    <p class="desc">A medieval scriptorium — monks copying books by hand at slanted wooden desks, lit by oil lamps.</p>
+    <p class="caption">[Manuscript illustration — public domain. To be sourced.]</p>
+  </div>
+
+  <!-- THE TECH -->
+  <section>
+    <h2>The Tech</h2>
+    <p>Then, in the 1440s, in the German city of Mainz, a goldsmith named Johannes Gutenberg invented a machine.</p>
+
+    <p>His idea, on paper, was simple. Instead of writing a page out by hand, what if you could <em>assemble</em> a page out of small metal letters — each letter cast separately so it could be used again and again? Lock the letters into a frame, brush them with ink, press a sheet of paper down on top, and you would have a printed page. Then you could rearrange the same letters to make the next page.</p>
+
+    <p>This is "movable type." The letters move.</p>
+
+    <p>Gutenberg's press, once it was running, could produce around 3,600 pages a day. A medieval scribe could produce maybe four. The press was almost a thousand times faster than the hand it replaced.</p>
+
+    <p>Within fifty years, there were printing presses in more than 250 cities across Europe. By the year 1500, somewhere between 8 and 20 million books had been printed — more books than all the scribes in European history had ever produced, combined.</p>
+
+    <p>The world had a new way to move ideas. Most people had no idea yet what that would mean.</p>
+  </section>
+
+  <!-- IMAGE 3 -->
+  <div class="image-placeholder">
+    <p class="icon">Image 3</p>
+    <p class="desc">A page from the Gutenberg Bible (c. 1455) — the first major book printed in Europe with movable type.</p>
+    <p class="caption">[High-resolution scan available via Library of Congress — public domain.]</p>
+  </div>
+
+  <!-- THE RIPPLES -->
+  <section>
+    <h2>The Ripples</h2>
+    <p>The first ripple was Luther himself. His 95 Theses were printed and reprinted faster than anyone could keep up. Within a year, his pamphlets — short, cheap, vivid, written in everyday German rather than Latin — were the most-read documents in Europe. He became, in modern terms, the first viral author.</p>
+
+    <p>What had started as one priest's complaint about indulgences quickly grew into something much bigger. Whole regions of Europe began breaking away from the Catholic Church to form new Christian churches of their own. This movement became known as the <strong>Reformation</strong> — from the word <em>reform</em>, meaning to remake or fix something. Within a few decades, the religious map of Europe looked nothing like it had before.</p>
+
+    <p>Luther had argued that ordinary people should be able to read the Bible in their own language. So he translated it into German. Soon, vernacular Bibles — Bibles in the everyday languages of ordinary people — appeared in English, French, Dutch, Czech, and dozens of others. For the first time in a thousand years, people could read their own holy book without a priest standing between them and the page.</p>
+
+    <p>Literacy began to climb. Slowly at first, then sharply. New industries appeared: bookbinders, paper mills, newspapers, and coffeehouses where people gathered to read and argue. By the 1600s, ideas were moving across Europe at speeds no medieval king could have imagined.</p>
+
+    <p>Not everyone celebrated. The Catholic Church, watching its monopoly on knowledge crumble, fought back. In 1559, it published the <em>Index of Forbidden Books</em> — a long, growing list of titles Catholics were forbidden to read. Governments started banning printers. Books were burned in public squares. Some authors were burned along with them.</p>
+
+    <p>There were quieter losers too. The scribes, whose careers were now obsolete. The Church itself, which never recovered its 1450 level of power. The Latin language, which had been Europe's shared tongue for a thousand years and slowly stopped being one.</p>
+
+    <p>And then the real darkness arrived. By the 1530s, the same printing presses that had spread Luther's ideas were being used to spread something else: hate. Pamphlets attacking Jews. Pamphlets attacking so-called "witches." Pamphlets attacking rival Christians. Religious wars rolled across Europe for over a century, fueled in part by cheap printed propaganda on every side. The 1572 St. Bartholomew's Day Massacre in France, in which thousands of Protestants were killed in a single night, was made possible in part by pamphlets that had spent years teaching neighbours to fear each other.</p>
+
+    <p>The press did not cause this. But it moved it faster than anything before.</p>
+  </section>
+
+  <!-- VOICES FROM THE TIME -->
+  <aside class="voices">
+    <p class="label">Voices from the Time</p>
+    <blockquote>
+      "They preach man-made doctrines who say that as soon as the money clinks into the money chest, the soul flies out of purgatory."
+      <cite>— Martin Luther, Thesis 27, October 1517. Printed and reprinted thousands of times across Europe within months.</cite>
+    </blockquote>
+  </aside>
+
+  <!-- THE PATTERN -->
+  <section>
+    <h2>The Pattern</h2>
+    <p>Look at the shape of what just happened.</p>
+
+    <p>For about fifty years, the printing press was a <strong>miracle</strong>. A new and breathtaking thing. People wrote about it the way people today write about artificial intelligence — with wonder, with fear, with a sense that the world had just changed under their feet.</p>
+
+    <p>Then it became <strong>ordinary</strong>. By 1550, most cities had a press. Printed books were no longer magic; they were furniture. Children grew up never knowing a world without them.</p>
+
+    <p>Then it was <strong>weaponized</strong>. Cheap pamphlets fuelled the Reformation. Then religious wars. Then propaganda. Then mass-printed hate.</p>
+
+    <p>Miracle. Ordinary. Weapon.</p>
+
+    <p>Remember this shape. We are going to see it five more times in this book, in five more technologies, over the next five hundred years. The faces change. The decades change. But the shape keeps coming back.</p>
+
+    <p>Why? That is what the rest of this book is trying to figure out.</p>
+  </section>
+
+  <!-- PATTERN TRACKER SVG -->
+  <figure class="pattern-tracker">
+    <p class="label">Pattern Tracker</p>
+    <p class="title">Chapter 1: The Printing Press</p>
+
+    <svg viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ptTitle ptDesc">
+      <title id="ptTitle">Printing Press Pattern Tracker</title>
+      <desc id="ptDesc">A horizontal timeline from 1440 to 1600 showing the printing press moving through three stages: miracle, ordinary, and weaponized.</desc>
+
+      <!-- Stage bands -->
+      <rect x="40" y="70" width="240" height="50" fill="#e9b94a" rx="3"/>
+      <rect x="280" y="70" width="160" height="50" fill="#9aa6b3" rx="3"/>
+      <rect x="440" y="70" width="320" height="50" fill="#a83c3c" rx="3"/>
+
+      <!-- Stage labels (inside bands) -->
+      <text x="160" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#3a2a10" letter-spacing="2">MIRACLE</text>
+      <text x="360" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#1f2a36" letter-spacing="2">ORDINARY</text>
+      <text x="600" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#fff" letter-spacing="2">WEAPONIZED</text>
+
+      <!-- Timeline year ticks -->
+      <line x1="40" y1="130" x2="760" y2="130" stroke="#4a3f33" stroke-width="1"/>
+
+      <!-- Tick marks -->
+      <g font-family="Inter, sans-serif" font-size="11" fill="#4a3f33">
+        <line x1="40" y1="125" x2="40" y2="135" stroke="#4a3f33"/>
+        <text x="40" y="152" text-anchor="middle">1440</text>
+
+        <line x1="280" y1="125" x2="280" y2="135" stroke="#4a3f33"/>
+        <text x="280" y="152" text-anchor="middle">1500</text>
+
+        <line x1="440" y1="125" x2="440" y2="135" stroke="#4a3f33"/>
+        <text x="440" y="152" text-anchor="middle">1540</text>
+
+        <line x1="600" y1="125" x2="600" y2="135" stroke="#4a3f33"/>
+        <text x="600" y="152" text-anchor="middle">1570</text>
+
+        <line x1="760" y1="125" x2="760" y2="135" stroke="#4a3f33"/>
+        <text x="760" y="152" text-anchor="middle">1600</text>
+      </g>
+
+      <!-- Event markers (dots above bands) -->
+      <!-- Press invented 1440 -->
+      <circle cx="40" cy="55" r="5" fill="#2a221b"/>
+      <line x1="40" y1="55" x2="40" y2="70" stroke="#2a221b" stroke-width="1.5"/>
+      <text x="40" y="42" text-anchor="middle" font-family="Lora, serif" font-size="11" font-style="italic" fill="#2a221b">Press invented</text>
+      <text x="40" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#2a221b">~1440</text>
+
+      <!-- 95 Theses 1517 -->
+      <circle cx="245" cy="55" r="6" fill="#8a2a2a"/>
+      <line x1="245" y1="55" x2="245" y2="70" stroke="#8a2a2a" stroke-width="1.5"/>
+      <text x="245" y="42" text-anchor="middle" font-family="Lora, serif" font-size="11" font-style="italic" fill="#8a2a2a">Luther's 95 Theses</text>
+      <text x="245" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#8a2a2a">1517</text>
+
+      <!-- Pamphlet wars begin -->
+      <circle cx="460" cy="55" r="5" fill="#2a221b"/>
+      <line x1="460" y1="55" x2="460" y2="70" stroke="#2a221b" stroke-width="1.5"/>
+      <text x="460" y="42" text-anchor="middle" font-family="Lora, serif" font-size="11" font-style="italic" fill="#2a221b">Pamphlet wars</text>
+      <text x="460" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#2a221b">1530s</text>
+
+      <!-- St. Bartholomew's -->
+      <circle cx="610" cy="55" r="5" fill="#2a221b"/>
+      <line x1="610" y1="55" x2="610" y2="70" stroke="#2a221b" stroke-width="1.5"/>
+      <text x="610" y="42" text-anchor="middle" font-family="Lora, serif" font-size="11" font-style="italic" fill="#2a221b">St. Bartholomew's Day</text>
+      <text x="610" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#2a221b">1572</text>
+
+      <!-- Future chapters preview row -->
+      <g opacity="0.35">
+        <text x="40" y="200" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#4a3f33" letter-spacing="1">COMING NEXT —</text>
+        <text x="180" y="200" font-family="Lora, serif" font-style="italic" font-size="12" fill="#4a3f33">Chapter 2: The Telegraph (1840s–1860s)</text>
+      </g>
+    </svg>
+
+    <figcaption>The full arc of one technology, watched in fast-forward. Future chapters will add their own arcs to this map.</figcaption>
+  </figure>
+
+  <!-- NOW -->
+  <section>
+    <h2>Now</h2>
+    <p>The press itself is long gone. The pattern it set running is not. Watch for it as we go.</p>
+  </section>
+
+  <!-- KEY WORDS SIDEBAR -->
+  <aside class="key-words">
+    <h3>Key Words</h3>
+    <dl>
+      <div class="entry"><dt>indulgences</dt><dd>payments made to the Catholic Church that were supposed to reduce a person's punishment for sin. Luther's anger about the selling of indulgences is what started the whole story.</dd></div>
+      <div class="entry"><dt>vernacular</dt><dd>the everyday language ordinary people speak at home, instead of an official or scholarly language like Latin. Luther translated the Bible into vernacular German.</dd></div>
+      <div class="entry"><dt>monopoly</dt><dd>when one person, group, or institution has total control over something, so no one else can compete. Before the printing press, the Catholic Church had a near-monopoly on books.</dd></div>
+      <div class="entry"><dt>pamphlet</dt><dd>a short, cheap printed booklet, usually written to argue for a point of view. Luther's pamphlets were the social-media posts of his time.</dd></div>
+      <div class="entry"><dt>Reformation</dt><dd>the religious movement that began in the 1500s and broke parts of European Christianity away from the Catholic Church.</dd></div>
+      <div class="entry"><dt>propaganda</dt><dd>information designed to push people toward one point of view, often by stirring up strong emotions like fear, anger, or pride.</dd></div>
+      <div class="entry"><dt>obsolete</dt><dd>no longer useful or wanted, because something newer has replaced it. Once printing presses spread, hand-copying scribes became obsolete.</dd></div>
+      <div class="entry"><dt>distribution</dt><dd>the way something gets delivered or spread to lots of people. A new <em>distribution technology</em> — like the press, or the internet — can change the world even if the ideas being spread are old.</dd></div>
+    </dl>
+  </aside>
+
+  <!-- REFLECT -->
+  <section class="reflect">
+    <h2>Reflect</h2>
+    <ol>
+      <li>Why did Luther's ideas spread so quickly in 1517, when similar criticisms of the Church had been made by other people in earlier centuries and gone almost nowhere?</li>
+      <li>If the printing press had never been invented, do you think the Reformation would still have happened? Defend your answer using evidence from the chapter.</li>
+    </ol>
+  </section>
+
+  <!-- NAV -->
+  <nav class="chapter-nav">
+    <div class="prev">
+      <span class="label">— Prologue</span>
+      <span class="title">The Pattern</span>
+    </div>
+    <div class="next">
+      <span class="label">Chapter 2 →</span>
+      <span class="title">The Two-Thousand-Year Speed Limit</span>
+    </div>
+  </nav>
+
+</article>
+
+</body>
+</html>
