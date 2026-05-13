@@ -187,6 +187,48 @@ p {
   font-style: normal;
 }
 
+/* REAL IMAGES (replaces .image-placeholder once an image is sourced) */
+.image {
+  margin: 32px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow);
+}
+
+.image figcaption {
+  margin: 14px 4px 0;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.image figcaption .credit {
+  display: block;
+  margin-top: 4px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+  .image figcaption { font-size: 13px; }
+  .image figcaption .credit { font-size: 10px; }
+}
+
 /* VOICES FROM THE TIME */
 .voices {
   background: #fff8ea;
