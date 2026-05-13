@@ -1,0 +1,464 @@
+/* ============================================================
+   How Information Changed the World — chapter shared styles
+   Used by every chapter, prologue, and epilogue. The landing
+   page (index.html) has its own embedded styles for the cover.
+   ============================================================ */
+
+:root {
+  --bg: #f6efe1;
+  --bg-deep: #efe5d0;
+  --ink: #2a221b;
+  --ink-soft: #4a3f33;
+  --rule: #d9c9a8;
+  --accent: #8a2a2a;
+  --accent-soft: #b85c4f;
+  --gold: #c89b3c;
+  --blue-gray: #6c7a89;
+  --red-deep: #7a1d1d;
+  --shadow: 0 2px 14px rgba(60, 40, 20, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 19px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 60px 32px 120px;
+}
+
+/* HEADER */
+header.chapter-header {
+  text-align: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 60px;
+}
+
+.series {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 24px;
+  font-weight: 600;
+}
+
+.chapter-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 1.1;
+  margin: 0 0 16px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* SECTION HEADINGS */
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 56px 0 20px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+}
+
+p {
+  margin: 0 0 22px;
+}
+
+/* THE MOMENT — dramatic opening */
+.moment {
+  background: var(--bg-deep);
+  border-left: 4px solid var(--accent);
+  padding: 32px 36px;
+  margin: 40px -36px;
+  border-radius: 2px;
+  box-shadow: var(--shadow);
+}
+
+.moment h2 {
+  margin-top: 0;
+}
+
+.moment p:first-of-type::first-letter {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 64px;
+  font-weight: 600;
+  float: left;
+  line-height: 0.9;
+  margin: 6px 10px 0 0;
+  color: var(--accent);
+}
+
+.moment p {
+  font-size: 19px;
+  line-height: 1.65;
+}
+
+.moment .nailed {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--accent);
+  margin: 28px 0;
+  letter-spacing: 0.02em;
+}
+
+/* IMAGE PLACEHOLDER */
+.image-placeholder {
+  border: 1.5px dashed var(--accent-soft);
+  background: rgba(255, 255, 255, 0.4);
+  padding: 40px 24px;
+  text-align: center;
+  margin: 32px 0;
+  border-radius: 4px;
+}
+
+.image-placeholder .icon {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.image-placeholder .desc {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 16px;
+  margin: 0;
+}
+
+.image-placeholder .caption {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-style: normal;
+}
+
+/* VOICES FROM THE TIME */
+.voices {
+  background: #fff8ea;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 32px 36px;
+  margin: 40px 0;
+  position: relative;
+}
+
+.voices::before {
+  content: "❝";
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px;
+  color: var(--accent-soft);
+  position: absolute;
+  top: -8px;
+  left: 18px;
+  line-height: 1;
+  opacity: 0.4;
+}
+
+.voices .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin: 0 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.voices blockquote {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--ink);
+  position: relative;
+  z-index: 1;
+}
+
+.voices cite {
+  display: block;
+  margin-top: 16px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+}
+
+/* PATTERN TRACKER */
+.pattern-tracker {
+  margin: 48px 0;
+  padding: 32px 24px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+.pattern-tracker .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-align: center;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.pattern-tracker .title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  text-align: center;
+  margin: 0 0 24px;
+  color: var(--ink);
+}
+
+.pattern-tracker svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pattern-tracker figcaption {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-top: 18px;
+}
+
+/* KEY WORDS SIDEBAR */
+.key-words {
+  background: var(--bg-deep);
+  border-radius: 6px;
+  padding: 28px 32px;
+  margin: 48px 0;
+}
+
+.key-words h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+
+.key-words dl {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.key-words dt {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 15px;
+  display: inline;
+}
+
+.key-words dd {
+  display: inline;
+  margin: 0;
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.key-words dt::after {
+  content: " — ";
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+
+.key-words .entry {
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(160, 130, 80, 0.18);
+}
+
+.key-words .entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* REFLECT */
+.reflect {
+  background: linear-gradient(to bottom, var(--bg-deep), var(--bg));
+  border-radius: 6px;
+  padding: 32px 36px;
+  margin-top: 56px;
+  border-top: 3px solid var(--accent);
+}
+
+.reflect h2 {
+  margin-top: 0;
+}
+
+.reflect ol {
+  padding-left: 0;
+  counter-reset: q;
+  list-style: none;
+  margin: 0;
+}
+
+.reflect ol li {
+  counter-increment: q;
+  padding-left: 56px;
+  position: relative;
+  margin-bottom: 24px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.reflect ol li::before {
+  content: counter(q);
+  position: absolute;
+  left: 0;
+  top: -4px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.reflect ol li:last-child {
+  margin-bottom: 0;
+}
+
+/* FOOTER NAV */
+.chapter-nav {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  gap: 24px;
+}
+
+.chapter-nav a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 8px 0;
+  transition: color 0.15s ease;
+}
+
+.chapter-nav a:hover .title {
+  color: var(--accent);
+}
+
+.chapter-nav .next {
+  text-align: right;
+}
+
+.chapter-nav .label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  margin-bottom: 4px;
+}
+
+.chapter-nav .title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--ink);
+}
+
+/* PROLOGUE / EPILOGUE — slightly different from chapters */
+.prologue-header,
+.epilogue-header {
+  text-align: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 60px;
+}
+
+.prologue-header h1,
+.epilogue-header h1 {
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  article { padding: 40px 20px 80px; }
+  body { font-size: 17px; }
+  h1 { font-size: 36px; }
+  .moment { margin: 32px -20px; padding: 24px 24px; }
+  .voices { padding: 24px 24px; }
+  .reflect { padding: 24px 24px; }
+  .key-words { padding: 22px 24px; }
+  .reflect ol li { padding-left: 44px; font-size: 16px; }
+  .reflect ol li::before { font-size: 30px; }
+  .chapter-nav { flex-direction: column; gap: 24px; align-items: stretch; }
+  .chapter-nav .next { text-align: left; }
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epilogue — Spotting the Pattern | How Information Changed the World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/textbook.css">
+  <style>
+    /* Epilogue-specific: side-by-side comparison table */
+    .recap-table {
+      margin: 40px 0;
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .recap-table th,
+    .recap-table td {
+      text-align: left;
+      vertical-align: top;
+      padding: 14px 10px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .recap-table th {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .recap-table thead th {
+      border-bottom: 2px solid var(--accent);
+    }
+    .recap-table .chap {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .recap-table .chap .era {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+    .recap-table .gold { color: #8a6822; }
+    .recap-table .gray { color: #4a5a6c; }
+    .recap-table .red  { color: var(--red-deep); }
+
+    @media (max-width: 640px) {
+      .recap-table { font-size: 14px; }
+      .recap-table th, .recap-table td { padding: 12px 6px; }
+      .recap-table .chap { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+<article>
+
+  <header class="chapter-header epilogue-header">
+    <p class="series">How Information Changed the World</p>
+    <p class="chapter-num">Epilogue</p>
+    <h1>Spotting the Pattern</h1>
+    <p class="subtitle">A short page. Maybe the most important one.</p>
+  </header>
+
+  <section>
+    <p>You have just read six stories.</p>
+
+    <p>Six new ways to copy or move information. Six new technologies, born hundreds of years apart, on three different continents, in languages most students never read.</p>
+
+    <p>And six identical shapes.</p>
+
+    <p>Each one began as a <strong>miracle</strong>. Each one became <strong>ordinary</strong>. Each one was eventually pointed at human beings — to manipulate them, frighten them, or sell them something they did not know they wanted.</p>
+
+    <p>Miracle. Ordinary. Weapon.</p>
+
+    <p>For five hundred years, this pattern has been running. And each time, faster than before. The printing press took about 150 years to move through all three stages. The smartphone, by some measures, has done it in fifteen.</p>
+
+    <p>This epilogue is short. It is also the most important page in the book.</p>
+  </section>
+
+  <!-- THE STACKED RECAP SVG -->
+  <figure class="pattern-tracker">
+    <p class="label">All Six Arcs</p>
+    <p class="title">The Pattern, Stacked</p>
+
+    <svg viewBox="0 0 800 410" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="recapTitle recapDesc">
+      <title id="recapTitle">All six chapter arcs side by side</title>
+      <desc id="recapDesc">A stacked chart showing the miracle, ordinary, and weaponized stages of each of the six information technologies covered in this book. Each row's bar is the same width to make the proportions easy to compare. Eras and durations are listed on the right.</desc>
+
+      <!-- Header row -->
+      <text x="40" y="36" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#4a3f33" letter-spacing="1.5">CHAPTER</text>
+      <text x="160" y="36" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#4a3f33" letter-spacing="1.5">MIRACLE → ORDINARY → WEAPONIZED</text>
+      <text x="600" y="36" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#4a3f33" letter-spacing="1.5">ERA · DURATION</text>
+
+      <line x1="40" y1="46" x2="760" y2="46" stroke="#a83c3c" stroke-width="2"/>
+
+      <!-- Row 1: Ch 1 Printing Press -->
+      <g transform="translate(0, 70)">
+        <text x="40" y="14" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b">Ch 1 · Press</text>
+        <rect x="160" y="0" width="150" height="22" fill="#e9b94a"/>
+        <rect x="310" y="0" width="100" height="22" fill="#9aa6b3"/>
+        <rect x="410" y="0" width="150" height="22" fill="#a83c3c"/>
+        <text x="600" y="14" font-family="Lora, serif" font-style="italic" font-size="13" fill="#4a3f33">1440–1600 · ~150 yrs</text>
+      </g>
+
+      <!-- Row 2: Ch 2 Telegraph -->
+      <g transform="translate(0, 120)">
+        <text x="40" y="14" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b">Ch 2 · Telegraph</text>
+        <rect x="160" y="0" width="100" height="22" fill="#e9b94a"/>
+        <rect x="260" y="0" width="150" height="22" fill="#9aa6b3"/>
+        <rect x="410" y="0" width="150" height="22" fill="#a83c3c"/>
+        <text x="600" y="14" font-family="Lora, serif" font-style="italic" font-size="13" fill="#4a3f33">1840–1920 · ~70 yrs</text>
+      </g>
+
+      <!-- Row 3: Ch 3 Radio -->
+      <g transform="translate(0, 170)">
+        <text x="40" y="14" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b">Ch 3 · Radio</text>
+        <rect x="160" y="0" width="160" height="22" fill="#e9b94a"/>
+        <rect x="320" y="0" width="104" height="22" fill="#9aa6b3"/>
+        <rect x="424" y="0" width="136" height="22" fill="#a83c3c"/>
+        <text x="600" y="14" font-family="Lora, serif" font-style="italic" font-size="13" fill="#4a3f33">1900–1950 · ~30 yrs</text>
+      </g>
+
+      <!-- Row 4: Ch 4 Television -->
+      <g transform="translate(0, 220)">
+        <text x="40" y="14" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b">Ch 4 · Television</text>
+        <rect x="160" y="0" width="152" height="22" fill="#e9b94a"/>
+        <rect x="312" y="0" width="88" height="22" fill="#9aa6b3"/>
+        <rect x="400" y="0" width="160" height="22" fill="#a83c3c"/>
+        <text x="600" y="14" font-family="Lora, serif" font-style="italic" font-size="13" fill="#4a3f33">1950–2000 · ~40 yrs</text>
+      </g>
+
+      <!-- Row 5: Ch 5 Internet -->
+      <g transform="translate(0, 270)">
+        <text x="40" y="14" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b">Ch 5 · Internet</text>
+        <rect x="160" y="0" width="312" height="22" fill="#e9b94a"/>
+        <rect x="472" y="0" width="88" height="22" fill="#9aa6b3"/>
+        <rect x="560" y="0" width="0" height="22" fill="#a83c3c"/>
+        <rect x="560" y="0" width="0" height="22" fill="none" stroke="#a83c3c" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <text x="600" y="14" font-family="Lora, serif" font-style="italic" font-size="13" fill="#4a3f33">1969–2010 · arc continues</text>
+      </g>
+
+      <!-- Row 6: Ch 6 Smartphones -->
+      <g transform="translate(0, 320)">
+        <text x="40" y="14" font-family="Cormorant Garamond, serif" font-size="16" font-weight="600" fill="#2a221b">Ch 6 · Smartphone</text>
+        <rect x="160" y="0" width="112" height="22" fill="#e9b94a"/>
+        <rect x="272" y="0" width="88" height="22" fill="#9aa6b3"/>
+        <rect x="360" y="0" width="200" height="22" fill="#a83c3c"/>
+        <text x="600" y="14" font-family="Lora, serif" font-style="italic" font-size="13" fill="#4a3f33">2007–now · ~15 yrs</text>
+      </g>
+
+      <!-- Legend -->
+      <g transform="translate(40, 380)">
+        <rect x="0" y="0" width="14" height="14" fill="#e9b94a"/>
+        <text x="20" y="11" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#4a3f33" letter-spacing="1">MIRACLE</text>
+
+        <rect x="110" y="0" width="14" height="14" fill="#9aa6b3"/>
+        <text x="130" y="11" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#4a3f33" letter-spacing="1">ORDINARY</text>
+
+        <rect x="230" y="0" width="14" height="14" fill="#a83c3c"/>
+        <text x="250" y="11" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#4a3f33" letter-spacing="1">WEAPONIZED</text>
+
+        <text x="370" y="11" font-family="Lora, serif" font-style="italic" font-size="11" fill="#4a3f33">All bars shown at equal width to compare proportions.</text>
+      </g>
+    </svg>
+
+    <figcaption>Print this. Stick it inside the front cover of your next notebook. Look at it whenever something new arrives in the world.</figcaption>
+  </figure>
+
+  <!-- TABLE OF SPECIFIC MOMENTS -->
+  <section>
+    <h2>Six Stories, Side by Side</h2>
+
+    <p>The arcs above show the <em>shape</em>. The table below shows the <em>moments</em> — specific things that happened, in specific places, that mark each stage of each chapter's arc.</p>
+
+    <table class="recap-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="gold">Miracle</th>
+          <th class="gray">Ordinary</th>
+          <th class="red">Weaponized</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="chap">1 · Press<span class="era">1440–1600</span></td>
+          <td>Luther's 95 Theses fly across Europe (1517)</td>
+          <td>Printed books in most literate homes (1500s)</td>
+          <td>Religious-war pamphlets; St. Bartholomew's Day Massacre (1572)</td>
+        </tr>
+        <tr>
+          <td class="chap">2 · Telegraph<span class="era">1840–1920</span></td>
+          <td>"What hath God wrought?" (1844); Atlantic cable (1858/66)</td>
+          <td>Daily wire-service news; time zones; real-time markets (1860s)</td>
+          <td>Yellow journalism; WWI propaganda telegrams (1890s–1914)</td>
+        </tr>
+        <tr>
+          <td class="chap">3 · Radio<span class="era">1900–1950</span></td>
+          <td>Titanic SOS (1912)</td>
+          <td>Radio in every living room; FDR's Fireside Chats (1920s–30s)</td>
+          <td>Nazi rallies broadcast nationally; Rwandan radio genocide (1933–94)</td>
+        </tr>
+        <tr>
+          <td class="chap">4 · Television<span class="era">1950–2000</span></td>
+          <td>Kennedy–Nixon debate (1960); Moon landing (1969)</td>
+          <td>Family TV night; sitcoms; the trusted anchor (1970s)</td>
+          <td>Attack ads; partisan cable news (1988–96)</td>
+        </tr>
+        <tr>
+          <td class="chap">5 · Internet<span class="era">1969–2010</span></td>
+          <td>"lo" (1969); World Wide Web proposal (1989)</td>
+          <td>Email, search, e-commerce as background air (late 1990s–2000s)</td>
+          <td><em>(begins in Chapter 6)</em></td>
+        </tr>
+        <tr>
+          <td class="chap">6 · Smartphone<span class="era">2007–now</span></td>
+          <td>iPhone (2007); Tahrir Square (2011)</td>
+          <td>Touchscreens in every pocket; a generation that never knew otherwise (2010s)</td>
+          <td>Algorithmic misinformation; surveillance; AI-generated fakes (2016–now)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- THE NEXT ONE -->
+  <section>
+    <h2>The Next One</h2>
+
+    <p>The next information technology is already arriving. It might be artificial intelligence. It might be virtual reality. It might be brain-computer interfaces. It might be something nobody has named yet. In any of those cases, the pattern in this book tells you what to watch for.</p>
+
+    <p>Watch for the <strong>miracle</strong>. The first wave of news stories. The grand predictions. The people who feel like wizards.</p>
+
+    <p>Watch for the moment it becomes <strong>ordinary</strong>. The day people stop being amazed. The day kids assume it has always existed.</p>
+
+    <p>And watch — carefully — for the moment it is <strong>weaponized</strong>. The first manipulation. The first political campaign that uses it. The first state-sponsored use. The first group of teenagers harming themselves at rates that line up suspiciously well with its adoption curve.</p>
+
+    <p>You know this story. You have just read it six times.</p>
+  </section>
+
+  <!-- YOUR SIXTY SECONDS — summative -->
+  <section class="moment">
+    <h2>Your Sixty Seconds</h2>
+
+    <p>Now your job.</p>
+
+    <p>For your summative task, pick a technology. It can be one from this book or one we did not cover. Pen and paper. Photography. Vaccines. Credit cards. Television sports. Drones. ChatGPT. The bicycle. Anything that moves information or ideas from one person to many.</p>
+
+    <p>In about sixty seconds of video, tell its story. Show its miracle. Show how it became ordinary. Show how it has been — or could be — weaponized.</p>
+
+    <p>Sixty seconds. One technology. One arc.</p>
+
+    <p class="nailed">You have read six examples. Now you make the seventh.</p>
+  </section>
+
+  <!-- KEY WORDS — final consolidation -->
+  <aside class="key-words">
+    <h3>The Whole Vocabulary</h3>
+    <dl>
+      <div class="entry"><dt>miracle stage</dt><dd>the early life of a new information technology, when most people are amazed, predictions are grand, and only a few experts really understand it.</dd></div>
+      <div class="entry"><dt>ordinary stage</dt><dd>the middle life of a new information technology, when it stops being magical and becomes part of how the world simply works. Often invisible to the people inside it.</dd></div>
+      <div class="entry"><dt>weaponized stage</dt><dd>the later life of a new information technology, when someone learns to point it at people — to manipulate, frighten, control, or sell. Often (but not always) the state.</dd></div>
+      <div class="entry"><dt>pattern</dt><dd>a shape that repeats in different times and places. The whole point of this book is that <em>miracle → ordinary → weaponized</em> is a pattern, not a coincidence.</dd></div>
+      <div class="entry"><dt>information technology</dt><dd>any tool that lets humans copy, store, or move information more easily — from cave paintings to ChatGPT.</dd></div>
+    </dl>
+  </aside>
+
+  <!-- REFLECT — final -->
+  <section class="reflect">
+    <h2>Final Reflect</h2>
+    <ol>
+      <li>Pick one chapter from this book whose story surprised you most. What did you think you knew before reading it, and what changed?</li>
+      <li>Look forward, not backward. Name one technology that is currently being talked about as a "miracle" — and predict, with evidence from this book, how its "weaponized" stage might look. There is no single right answer; the quality of the prediction is in the reasoning.</li>
+    </ol>
+  </section>
+
+  <!-- NAV -->
+  <nav class="chapter-nav">
+    <div class="prev">
+      <a href="06-smartphones.html">
+        <span class="label">← Chapter 6</span>
+        <span class="title">Revolutions in Your Pocket</span>
+      </a>
+    </div>
+    <div class="next">
+      <a href="index.html">
+        <span class="label">Back to Contents →</span>
+        <span class="title">How Information Changed the World</span>
+      </a>
+    </div>
+  </nav>
+
+</article>
+
+</body>
+</html>
